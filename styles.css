@@ -1,0 +1,79 @@
+/* Corpo da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* fundo neutro */
+}
+
+/* Container principal */
+#game {
+  text-align: center;
+}
+
+/* Status do jogo */
+#status {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Tabuleiro */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 0 auto 20px;
+}
+
+/* Células padrão */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #ffffff; /* fundo padrão neutro */
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+/* Hover em célula vazia */
+.cell:hover:empty {
+  background-color: #e0e0e0;
+}
+
+/* X – azul */
+.cell.x {
+  background-color: #007bff; /* azul forte */
+  color: white;
+}
+
+/* O – vermelho */
+.cell.o {
+  background-color: #dc3545; /* vermelho forte */
+  color: white;
+}
+
+/* Botão de reiniciar */
+#restart {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#restart:hover {
+  background-color: #555;
+}
